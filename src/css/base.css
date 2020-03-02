@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+      padding: 0;
+      margin: 0;
+      box-sizing: inherit;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html {
+      box-sizing: border-box;
+      font-size: 62.5%; 
+      overflow: hidden;
+}
+
+::-webkit-scrollbar {
+      display: none;
+}
+
+:root {
+      --layout-main:[full-start toolbar-start] 5vh [toolbar-end map-start] 35vh [map-end list-start] minmax(85vh, min-content) [list-end full-end];
+      --layout-list:[full-start toolbar-start] 5vh [toolbar-end map-start] 10vh [map-end list-start] 85vh [list-end full-end];
+      --layout-map:[full-start toolbar-start] 5vh [toolbar-end map-start] 85vh [map-end list-start] 85vh [list-end full-end];
+
+      --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+      --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+}
+
+
+.app {
+      display: grid;
+      position: relative;
+      transition: all .5s;
+      grid-template-rows: var(--layout-main);    
+      height: 90%;
+}
+
+.app:hover {
+      grid-template-rows: var(--layout-map);
+}

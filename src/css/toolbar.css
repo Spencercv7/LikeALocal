@@ -1,0 +1,5 @@
+.toolbar {
+    background-color: blue;
+    z-index: 1;
+    grid-row: toolbar-start / toolbar-end;
+}

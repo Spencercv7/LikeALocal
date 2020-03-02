@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 
 const mapStyles = {
@@ -7,15 +6,16 @@ const mapStyles = {
       height: '100%'
     };
 
-export class TestMap extends React.Component {
+export class CustomMap extends React.Component {
 
       render() {
             return (
                   <Map  
+                        className="map"
                         google={this.props.google}
                         zoom={8}
                         style={mapStyles}
-                        initalCenter={{ lat: 47.444, lng: -122.176 }}
+                        initalCenter={{ lat: 10.1234, lng: -10.1234 }}
                   />
             );
       }
@@ -24,4 +24,4 @@ export class TestMap extends React.Component {
 
 export default GoogleApiWrapper({
       apiKey: 'AIzaSyBA3CFdP633NDVrc4cM5pDrF8BiKT3O26k'
-})(TestMap);
+})(CustomMap);

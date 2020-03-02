@@ -1,0 +1,5 @@
+.map {
+    position: relative !important;
+    grid-row: map-start / map-end;
+
+}
